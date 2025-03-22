@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DelishShare - Recipe Sharing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 15px;
+}
+
+input, textarea {
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Recipe Gallery */
+#recipeList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: left;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Meal Planner */
+#mealPlanner {
+    background: #ffde59;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.addToMealBtn {
+    background-color: #ff9800;
+    margin-top: 10px;
+}
+
+.addToMealBtn:hover {
+    background-color: #e68900;
+}
+    <header>
+        <img src="logo.png" alt="DelishShare Logo" class="logo">
+        <h1>DelishShare</h1>
+        <input type="text" id="searchBar" placeholder="🔍 Search for a recipe...">
+    </header>
+
+    <main>
+        <section id="uploadSection">
+            <h2>📌 Upload Your Recipe</h2>
+            <input type="text" id="recipeTitle" placeholder="Recipe Title">
+            <textarea id="recipeIngredients" placeholder="Ingredients (comma-separated)"></textarea>
+            <textarea id="recipeInstructions" placeholder="Instructions"></textarea>
+            <input type="file" id="recipeImage" accept="image/*">
+            <button onclick="uploadRecipe()">Upload Recipe ✅</button>
+        </section>
+
+        <section id="recipeGallery">
+            <h2>🍽 Recipe Collection</h2>
+            <div id="recipeList"></div>
+        </section>
+
+        <section id="mealPlanner">
+            <h2>📅 Meal Planner</h2>
+            <ul id="mealList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

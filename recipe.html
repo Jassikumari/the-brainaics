@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #ff6f61;
+    padding: 20px;
+    color: white;
+}
+
+input, textarea {
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+    display: block;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#recipeList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recipe-card {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    text-align: left;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+}
+
+.addToMealBtn {
+    background-color: #ff9800;
+}
+    <header>
+        <h1>Recipe Sharing</h1>
+        <input type="text" id="searchBar" placeholder="Search recipes...">
+    </header>
+
+    <main>
+        <section id="uploadSection">
+            <h2>Upload Your Recipe</h2>
+            <input type="text" id="recipeTitle" placeholder="Recipe Title">
+            <textarea id="recipeIngredients" placeholder="Ingredients"></textarea>
+            <textarea id="recipeInstructions" placeholder="Instructions"></textarea>
+            <input type="file" id="recipeImage" accept="image/*">
+            <button onclick="uploadRecipe()">Upload Recipe</button>
+        </section>
+
+        <section id="recipeGallery">
+            <h2>Recipe Collection</h2>
+            <div id="recipeList"></div>
+        </section>
+
+        <section id="mealPlanner">
+            <h2>Meal Planner</h2>
+            <ul id="mealList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
